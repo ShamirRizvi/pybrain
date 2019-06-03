@@ -65,11 +65,20 @@ class ParticleSwarmOptimizer(ContinuousOptimizer):
             maxs = scipy.array([max_ for min_, max_ in self.boundaries])
 
         self.particles = []
-        for _ in range(self.size):
+        
+        # this is where I would put the commensalims and mutalism phases no this just controles? 
+        for x in range(self.size):
             startingPosition = scipy.random.random(self.dim)
             startingPosition *= (maxs - mins)
             startingPosition += mins
             self.particles.append(Particle(startingPosition, self.minimize))
+            x = x + 1 
+            else x = population
+              stop 
+        for i in range(self.particles.size)
+            xi = particles.[i]
+            learnsteps
+            i = i + 1
 
         # Global neighborhood
         self.neighbours = self.neighbourfunction(self.particles)
@@ -79,6 +88,14 @@ class ParticleSwarmOptimizer(ContinuousOptimizer):
         """
         picker = min if self.minimize else max
         return picker(particlelist, key=lambda p: p.fitness)
+      
+    def randomXj(self, particlelist)
+      """Return random Xj from population"""
+      randompicker = rand
+      particlelist.append(-xi) 
+      return picker(particlelist)
+     
+ 
 
     def _learnStep(self):
         for particle in self.particles:
